@@ -10,7 +10,7 @@ function Routes() {
                     <Home/>
                 </Route>
 
-                <Route path="/dashboard" exact>
+                <Route path="/dashboard">
                     <Dashboard/>
                 </Route>
             </Switch>
@@ -18,4 +18,4 @@ function Routes() {
     );
 }
 
-export default Routes;
+export default Routes; 
