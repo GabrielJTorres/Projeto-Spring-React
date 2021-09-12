@@ -1,6 +1,31 @@
+import { useState } from 'react';
 import Chart from 'react-apexcharts';
 
+type SeriesData = {
+    name: string;
+    data: number[];
+}
+
+type ChartData = {
+    labels: {
+        categories: string[];
+    };
+    series: SeriesData[];
+}
+
 function BarChart() {
+
+    const [chartData, setChartData] = useState<ChartData>({
+        labels: {
+            categories: []
+        },
+        series: [
+            {
+                name: "",
+                data: []                   
+            }
+        ]
+    } );
 
     const options = {
         plotOptions: {
